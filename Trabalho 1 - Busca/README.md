@@ -100,9 +100,11 @@ Sua implementação deve funcionar para todos os layouts de labirinto abaixo:
 ``
 python pacman.py -l tinyMaze -p SearchAgent -a fn=dfs
 ``
+
 ``
 python pacman.py -l mediumMaze -p SearchAgent -a fn=dfs
 ``
+
 ``
 python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=dfs
 ``
