@@ -14,7 +14,7 @@ Neste projeto, seu agente Pacman deve encontrar caminhos através de dos labirin
 
 O trabalho deve ser realizado em duplas. **Não serão aceitos trabalhos individuais**.
 
-A data da entrega sera **09/abril (ajustar)** pelo moodle. Um membro da dupla deverá enviar o arquivo  contendo o código desenvolvido e o relatório, conforme descrito a seguir.
+A data da entrega sera **30/março** pelo moodle. Um membro da dupla deverá enviar o arquivo  contendo o código desenvolvido e o relatório, conforme descrito a seguir.
 
 A nota deste trabalho será parte da média de trabalhos práticos (TP) da disciplina.
 
