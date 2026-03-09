@@ -1,21 +1,62 @@
 python pacman.py
+# Executa o Pacman com as configurações padrão (layout e agente padrão).
+
 python pacman.py --layout testMaze --pacman GoWestAgent
+# Usa o layout "testMaze" com o agente GoWestAgent, que sempre tenta ir para o oeste (West).
+
 python pacman.py --layout tinyMaze --pacman GoWestAgent
+# Mesmo agente GoWestAgent, agora no layout "tinyMaze".
+
 python pacman.py -h
+# Exibe o menu de ajuda com todas as opções disponíveis.
+
 python pacman.py -l tinyMaze -p SearchAgent -a fn=tinyMazeSearch
+# Executa SearchAgent usando a função tinyMazeSearch, solução fixa exclusiva do tinyMaze.
+
 python pacman.py -l tinyMaze -p SearchAgent
+# Executa SearchAgent no tinyMaze usando a função de busca padrão (normalmente DFS).
+
 python pacman.py -l mediumMaze -p SearchAgent
+# Executa DFS no mediumMaze. Não garante caminho ótimo.
+
 python pacman.py -l bigMaze -z .5 -p SearchAgent
+# Executa DFS no bigMaze com zoom reduzido para 50%.
+
 python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
+# Executa BFS no mediumMaze. BFS encontra o caminho mais curto.
+
 python pacman.py -l bigMaze -p SearchAgent -a fn=bfs -z .5
+# Executa BFS no bigMaze com zoom 0.5. Busca ótima mas mais lenta.
+
 python eightpuzzle.py
+# Executa o solucionador do problema 8-puzzle.
+
 python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs
+# Executa UCS (Uniform Cost Search) no mediumMaze.
+
 python pacman.py -l mediumDottedMaze -p StayEastSearchAgent
+# Agente que prefere estados no lado leste do mapa (custo mais baixo no leste).
+
 python pacman.py -l mediumScaryMaze -p StayWestSearchAgent
-python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic 
+# Agente que prefere estados no lado oeste do mapa.
+
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+# Executa A* no bigMaze usando a heurística Manhattan.
+
 python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+# Executa BFS no CornersProblem no layout tinyCorners.
+
 python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+# Executa BFS no CornersProblem no layout mediumCorners (muito mais pesado).
+
 python pacman.py -l mediumCorners -p AStarCornersAgent -z 0.5
+# Executa A* com heurística de cantos no CornersProblem. Mais eficiente.
+
 python pacman.py -l testSearch -p AStarFoodSearchAgent
+# Executa A* no FoodSearchProblem em um layout pequeno de teste.
+
 python pacman.py -l trickySearch -p AStarFoodSearchAgent
-python pacman.py -l bigSearch -p ClosestDotSearchAgent -z .5 
+# Executa A* no FoodSearchProblem em um layout mais difícil (tricky).
+
+python pacman.py -l bigSearch -p ClosestDotSearchAgent -z .5
+# Agente guloso que busca sempre o ponto de comida mais próximo. Não ótimo, mas rápido.
